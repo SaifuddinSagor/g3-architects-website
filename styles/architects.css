@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .work-sans-font {
     font-family: "Work Sans", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
+
 /* shared styles */
-.display-flex{
+.display-flex {
     display: flex;
 }
-.text-primary{
-    color:#FF900E ;
+
+.text-primary {
+    color: #FF900E;
 }
+
 /* Dark2 */
-.text-gray{
-    color:#424242 ;
+.text-gray {
+    color: #424242;
 }
+
 /* Dark3 */
-.text-light-gray{
+.text-light-gray {
     color: #727272;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: rgba(255, 144, 14, 1);
     color: white;
     font-size: 1.25rem;
@@ -30,47 +35,57 @@
     border-radius: 8px;
     border: none;
 }
+
 /* main styles */
-main{
-    max-width:1440px ;
+main {
+    max-width: 1440px;
     margin: 0 auto;
 }
-.main > section{
+
+.main>section {
     margin-top: 130px;
 }
-.section-title{
-    font-size:2.8rem;
+
+.section-title {
+    font-size: 2.8rem;
     font-weight: 700;
 }
 
 /* header styles */
-.bg-light{
+.bg-light {
     background-color: rgba(255, 144, 14, 0.1);
-  }
+}
+
 /* navbar related styles */
-.navbar{
+.navbar {
     justify-content: space-between;
     align-items: center;
 }
-.brand{
+
+.brand {
     font-weight: 700;
     font-size: 3rem;
 }
-.nav-item{
+
+.nav-item {
     list-style: none;
     margin-right: 30px;
-    
+
 }
-.nav-link{
-   text-decoration: none;
-   font-size: 500;
+
+.nav-link {
+    text-decoration: none;
+    font-size: 500;
 }
-.navbar, .banner{
+
+.navbar,
+.banner {
     max-width: 1440px;
     margin: 0 auto;
 }
+
 /* banner related styles */
-.banner{
+.banner {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -79,96 +94,143 @@ main{
     text-align: center;
 }
 
-.banner-content{
+.banner-content {
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
     margin: 50px;
 }
-.banner-title{
-    font-weight:700 ;
+
+.banner-title {
+    font-weight: 700;
     font-size: 4rem;
 }
-.banner-description{
+
+.banner-description {
     font-size: 1rem;
 }
-.banner-image{
+
+.banner-image {
     width: 100%;
-} 
+}
+
 /* team and feature related styles */
-.teams{
+.teams {
     align-items: center;
 }
-.team-img-container{
+
+.team-img-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
-.our-features{
+
+.our-features {
     margin-left: 130px;
     max-width: 530;
 }
 
-#quick-list{
+#quick-list {
     font-weight: 500;
 }
+
 /* Some facts related styles */
-.facts-container{
+.facts-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     align-items: center;
 }
-.fact-card{
-    border:1px solid #FF900E;
+
+.fact-card {
+    border: 1px solid #FF900E;
     width: 240px;
-    height:240px;
+    height: 240px;
     border-radius: 8px;
     align-items: center;
     text-align: center;
     justify-content: center;
-   
+
 }
-.fact-number{
+
+.fact-number {
     font-size: 2.8rem;
     font-weight: 600;
-    margin-top:5px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
-.fact-name{
+
+.fact-name {
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: 10px;
 }
-.fact-description{
-max-width: 540px;
+
+.fact-description {
+    max-width: 540px;
 }
-.fact-icon{
+
+.fact-icon {
     align-items: center;
 
+}
+/* sponsors related styles */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsors-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+/* গ্রে করার জন্য */
+.sponsors-companies img {
+    filter: grayscale(100%);
 }
 
 /* Responsive Media query */
 @media screen and (max-width:575px) {
-    .navbar, 
-    .nav-link, 
-    .teams{
+
+    .navbar,
+    .nav-link,
+    .teams {
         flex-direction: column;
     }
-    .team-img-container{
-        grid-template-columns: repeat(1, 1fr);
+
+    .team-img-container,
+    .facts-container,
+    .sponsors-companies{
+        grid-template-columns: 1fr;
     }
-    .our-features{
+
+    .facts-container, .sponsors-companies {
+        justify-items: center;
+        gap:24px;
+    }
+    .sponsors-companies{
+        justify-content: center;
+        gap: 50px;
+    }
+    .our-features {
         margin-left: 20px;
     }
-    
+
 }
+
 /* Medium size device */
-@media screen and (min-width:576px) and (max-width:992px){
-    .teams{
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams {
         flex-direction: column;
     }
-    .our-features{
+
+    .our-features {
         margin-left: 50px auto;
     }
+    .sponsors-companies, .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+
 }
