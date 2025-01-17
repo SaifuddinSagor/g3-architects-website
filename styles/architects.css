@@ -230,7 +230,8 @@ width: 100%;
     font-size: 14px;
     color: #555; /* হালকা ধূসর টেক্সট */
     border-radius: 5px; /* প্রান্তগুলোকে গোলাকার করতে */
-    margin: 40px; 
+    margin: 40px auto; 
+    width: 50%;
 }
 /* Responsive Media query */
 @media screen and (max-width:575px) {
